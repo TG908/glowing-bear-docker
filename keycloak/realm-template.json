@@ -267,13 +267,12 @@
     {
       "id": "8a168049-f7e7-4c32-bfd6-0b5f4c75c1fa",
       "clientId": "$KEYCLOAK_CLIENT_ID",
-      "baseUrl": "https://glowingbear",
+      "baseUrl": "https://$GLOWINGBEAR_HOSTNAME",
       "surrogateAuthRequired": false,
       "enabled": true,
       "clientAuthenticatorType": "client-secret",
       "secret": "**********",
       "redirectUris": [
-        "https://glowingbear/*",
         "https://$GLOWINGBEAR_HOSTNAME"
       ],
       "webOrigins": [
