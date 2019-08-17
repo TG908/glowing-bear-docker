@@ -19,3 +19,4 @@ services:
       options:
         labels: application
         tag: glowingbear-ssl-proxy
+    dns: 8.8.8.8
