@@ -1,5 +1,5 @@
 {
-  "id": "${KEYCLOAK_REALM}",
+  "id": "transmart",
   "realm": "{$KEYCLOAK_REALM}",
   "displayName": "Glowing Bear login",
   "displayNameHtml": "",
@@ -65,8 +65,8 @@
     {
       "id": "7956f8a1-3377-4027-897a-fd2fd991beee",
       "clientId": "account",
-      "name": "${client_account}",
-      "baseUrl": "/auth/realms/${KEYCLOAK_REALM}/account",
+      "name": "",
+      "baseUrl": "/auth/realms/transmart/account",
       "surrogateAuthRequired": false,
       "enabled": true,
       "clientAuthenticatorType": "client-secret",
@@ -76,7 +76,7 @@
         "manage-account"
       ],
       "redirectUris": [
-        "/auth/realms/${KEYCLOAK_REALM}/account/*"
+        "/auth/realms/transmart/account/*"
       ],
       "webOrigins": [],
       "notBefore": 0,
@@ -107,7 +107,7 @@
     {
       "id": "228909ae-0527-4d4e-a89e-61aa2374cbdc",
       "clientId": "admin-cli",
-      "name": "${client_admin-cli}",
+      "name": "",
       "surrogateAuthRequired": false,
       "enabled": true,
       "clientAuthenticatorType": "client-secret",
@@ -142,7 +142,7 @@
     {
       "id": "00c6c3eb-8637-4365-a4d5-c07fd256aade",
       "clientId": "broker",
-      "name": "${client_broker}",
+      "name": "",
       "surrogateAuthRequired": false,
       "enabled": true,
       "clientAuthenticatorType": "client-secret",
@@ -177,7 +177,7 @@
     {
       "id": "0d4a41d1-093a-42d9-a3bc-ae579b985d0d",
       "clientId": "realm-management",
-      "name": "${client_realm-management}",
+      "name": "",
       "surrogateAuthRequired": false,
       "enabled": true,
       "clientAuthenticatorType": "client-secret",
@@ -212,14 +212,14 @@
     {
       "id": "b7a96857-6070-4737-a543-87a55f00bdf9",
       "clientId": "security-admin-console",
-      "name": "${client_security-admin-console}",
-      "baseUrl": "/auth/admin/${KEYCLOAK_REALM}/console/index.html",
+      "name": "",
+      "baseUrl": "/auth/admin/transmart/console/index.html",
       "surrogateAuthRequired": false,
       "enabled": true,
       "clientAuthenticatorType": "client-secret",
       "secret": "**********",
       "redirectUris": [
-        "/auth/admin/${KEYCLOAK_REALM}/console/*"
+        "/auth/admin/transmart/console/*"
       ],
       "webOrigins": [],
       "notBefore": 0,
@@ -266,14 +266,14 @@
     },
     {
       "id": "8a168049-f7e7-4c32-bfd6-0b5f4c75c1fa",
-      "clientId": "${KEYCLOAK_CLIENT_ID}",
-      "baseUrl": "https://${GLOWINGBEAR_HOSTNAME}",
+      "clientId": "transmart-client",
+      "baseUrl": "https://glowingbear.gymni.ch",
       "surrogateAuthRequired": false,
       "enabled": true,
       "clientAuthenticatorType": "client-secret",
       "secret": "**********",
       "redirectUris": [
-        "https://${GLOWINGBEAR_HOSTNAME}"
+        "https://glowingbear.gymni.ch"
       ],
       "webOrigins": [
         "*"
@@ -325,7 +325,7 @@
       "description": "OpenID Connect built-in scope: phone",
       "protocol": "openid-connect",
       "attributes": {
-        "consent.screen.text": "${phoneScopeConsentText}",
+        "consent.screen.text": "",
         "display.on.consent.screen": "true"
       },
       "protocolMappers": [
@@ -367,7 +367,7 @@
       "description": "OpenID Connect built-in scope: address",
       "protocol": "openid-connect",
       "attributes": {
-        "consent.screen.text": "${addressScopeConsentText}",
+        "consent.screen.text": "",
         "display.on.consent.screen": "true"
       },
       "protocolMappers": [
@@ -397,7 +397,7 @@
       "description": "OpenID Connect built-in scope: email",
       "protocol": "openid-connect",
       "attributes": {
-        "consent.screen.text": "${emailScopeConsentText}",
+        "consent.screen.text": "",
         "display.on.consent.screen": "true"
       },
       "protocolMappers": [
@@ -439,7 +439,7 @@
       "description": "OpenID Connect built-in scope: profile",
       "protocol": "openid-connect",
       "attributes": {
-        "consent.screen.text": "${profileScopeConsentText}",
+        "consent.screen.text": "",
         "display.on.consent.screen": "true"
       },
       "protocolMappers": [
@@ -658,7 +658,7 @@
       "description": "SAML role list",
       "protocol": "saml",
       "attributes": {
-        "consent.screen.text": "${samlRoleListScopeConsentText}",
+        "consent.screen.text": "",
         "display.on.consent.screen": "true"
       },
       "protocolMappers": [
@@ -682,7 +682,7 @@
       "description": "OpenID Connect built-in scope: offline_access",
       "protocol": "openid-connect",
       "attributes": {
-        "consent.screen.text": "${offlineAccessScopeConsentText}",
+        "consent.screen.text": "",
         "display.on.consent.screen": "true"
       }
     }
