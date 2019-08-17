@@ -9,7 +9,7 @@ services:
       KEYCLOAK_HOSTNAME: ${KEYCLOAK_HOSTNAME}
     volumes:
       - ./ssl/server.pem:/etc/nginx/server.pem
-      - ./ssl/server.key:/etc/nginx/server.key
+      - ./ssl/server.key:/etc/nginx/key.pem
     ports:
       - 80:80
       - 443:443
