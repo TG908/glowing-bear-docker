@@ -266,7 +266,7 @@
     },
     {
       "id": "8a168049-f7e7-4c32-bfd6-0b5f4c75c1fa",
-      "clientId": "transmart-client",
+      "clientId": "$KEYCLOAK_CLIENT_ID",
       "baseUrl": "https://glowingbear",
       "surrogateAuthRequired": false,
       "enabled": true,
