@@ -55,9 +55,7 @@ services:
         tag: keycloak
 
 volumes:
-  - keycloak-postgres-data:
-  - ./keycloak/setup-realm.sh:/opt/jboss/startup-scripts/setup-realm.sh
-  - ./keycloak/realm-template.json:/tmp/realm-template.json
+  keycloak-postgres-data:
 
 networks:
   keycloak-db-network:
