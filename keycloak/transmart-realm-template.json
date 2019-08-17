@@ -1,11 +1,6 @@
 {
-<<<<<<< HEAD:keycloak/realm-template.json
-  "id": "${KEYCLOAK_REALM}",
-  "realm": "${KEYCLOAK_REALM}",
-=======
   "id": "$KEYCLOAK_REALM",
   "realm": "$KEYCLOAK_REALM",
->>>>>>> Added template realm to keycloak:keycloak/transmart-realm-template.json
   "displayName": "Glowing Bear login",
   "displayNameHtml": "",
   "notBefore": 0,
@@ -71,11 +66,7 @@
       "id": "7956f8a1-3377-4027-897a-fd2fd991beee",
       "clientId": "account",
       "name": "${client_account}",
-<<<<<<< HEAD:keycloak/realm-template.json
-      "baseUrl": "/auth/realms/${KEYCLOAK_REALM}/account",
-=======
       "baseUrl": "/auth/realms/$KEYCLOAK_REALM/account",
->>>>>>> Added template realm to keycloak:keycloak/transmart-realm-template.json
       "surrogateAuthRequired": false,
       "enabled": true,
       "clientAuthenticatorType": "client-secret",
@@ -85,11 +76,7 @@
         "manage-account"
       ],
       "redirectUris": [
-<<<<<<< HEAD:keycloak/realm-template.json
-        "/auth/realms/${KEYCLOAK_REALM}/account/*"
-=======
         "/auth/realms/$KEYCLOAK_REALM/account/*"
->>>>>>> Added template realm to keycloak:keycloak/transmart-realm-template.json
       ],
       "webOrigins": [],
       "notBefore": 0,
@@ -106,21 +93,6 @@
       "authenticationFlowBindingOverrides": {},
       "fullScopeAllowed": false,
       "nodeReRegistrationTimeout": 0,
-      "protocolMappers": [
-        {
-          "id": "06c65f0d-1863-4285-8dc7-0c8b70c2be83",
-          "name": "transmart-audience",
-          "protocol": "openid-connect",
-          "protocolMapper": "oidc-audience-mapper",
-          "consentRequired": false,
-          "config": {
-            "included.client.audience": "transmart-client",
-            "id.token.claim": "false",
-            "access.token.claim": "true",
-            "userinfo.token.claim": "false"
-          }
-        }
-      ],
       "defaultClientScopes": [
         "role_list",
         "profile",
@@ -241,21 +213,13 @@
       "id": "b7a96857-6070-4737-a543-87a55f00bdf9",
       "clientId": "security-admin-console",
       "name": "${client_security-admin-console}",
-<<<<<<< HEAD:keycloak/realm-template.json
-      "baseUrl": "/auth/admin/${KEYCLOAK_REALM}/console/index.html",
-=======
       "baseUrl": "/auth/admin/$KEYCLOAK_REALM/console/index.html",
->>>>>>> Added template realm to keycloak:keycloak/transmart-realm-template.json
       "surrogateAuthRequired": false,
       "enabled": true,
       "clientAuthenticatorType": "client-secret",
       "secret": "**********",
       "redirectUris": [
-<<<<<<< HEAD:keycloak/realm-template.json
-        "/auth/admin/${KEYCLOAK_REALM}/console/*"
-=======
         "/auth/admin/$KEYCLOAK_REALM/console/*"
->>>>>>> Added template realm to keycloak:keycloak/transmart-realm-template.json
       ],
       "webOrigins": [],
       "notBefore": 0,
@@ -302,14 +266,14 @@
     },
     {
       "id": "8a168049-f7e7-4c32-bfd6-0b5f4c75c1fa",
-      "clientId": "${KEYCLOAK_CLIENT_ID}",
-      "baseUrl": "https://${GLOWINGBEAR_HOSTNAME}",
+      "clientId": "transmart-client",
+      "baseUrl": "https://glowingbear",
       "surrogateAuthRequired": false,
       "enabled": true,
       "clientAuthenticatorType": "client-secret",
       "secret": "**********",
       "redirectUris": [
-        "https://${GLOWINGBEAR_HOSTNAME}"
+        "https://glowingbear/*"
       ],
       "webOrigins": [
         "*"
@@ -342,20 +306,6 @@
       "authenticationFlowBindingOverrides": {},
       "fullScopeAllowed": true,
       "nodeReRegistrationTimeout": -1,
-      "protocolMappers": [
-        {
-          "id": "8a330260-40bd-406f-8a81-d73a68afd092",
-          "name": "transmart-client-audience",
-          "protocol": "openid-connect",
-          "protocolMapper": "oidc-audience-mapper",
-          "consentRequired": false,
-          "config": {
-            "included.client.audience": "transmart-client",
-            "id.token.claim": "false",
-            "access.token.claim": "true"
-          }
-        }
-      ],
       "defaultClientScopes": [
         "role_list",
         "profile",

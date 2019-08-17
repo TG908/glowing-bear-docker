@@ -34,8 +34,8 @@ services:
       KEYCLOAK_HTTP_PORT: 80
       KEYCLOAK_HTTPS_PORT: 443
       KEYCLOAK_IMPORT: /tmp/realm-export.json
-      KEYCLOAK_REALM: ${KEYCLOAK_REALM:?Please configure KEYCLOAK_REALM}
-      KEYCLOAK_CLIENT_ID: ${KEYCLOAK_CLIENT_ID:?Please configure KEYCLOAK_CLIENT_ID}
+      KEYCLOAK_CLIENT_ID: ${KEYCLOAK_CLIENT_ID}
+      KEYCLOAK_REALM: ${KEYCLOAK_REALM}
       PROXY_ADDRESS_FORWARDING: 'true'
       GLOWINGBEAR_HOSTNAME: ${GLOWINGBEAR_HOSTNAME:?Please configure GLOWINGBEAR_HOSTNAME.}
     ports:
@@ -55,7 +55,9 @@ services:
         tag: keycloak
 
 volumes:
-  keycloak-postgres-data:
+  - keycloak-postgres-data:
+  - ./keycloak/setup-realm.sh:/opt/jboss/startup-scripts/setup-realm.sh
+  - ./keycloak/realm-template.json:/tmp/realm-template.json
 
 networks:
   keycloak-db-network:
