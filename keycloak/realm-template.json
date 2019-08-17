@@ -1,6 +1,6 @@
 {
   "id": "${KEYCLOAK_REALM}",
-  "realm": "{$KEYCLOAK_REALM}",
+  "realm": "${KEYCLOAK_REALM}",
   "displayName": "Glowing Bear login",
   "displayNameHtml": "",
   "notBefore": 0,
