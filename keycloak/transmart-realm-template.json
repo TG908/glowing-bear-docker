@@ -273,7 +273,8 @@
       "clientAuthenticatorType": "client-secret",
       "secret": "**********",
       "redirectUris": [
-        "https://glowingbear/*"
+        "https://glowingbear/*",
+        "https://$GLOWINGBEAR_HOSTNAME"
       ],
       "webOrigins": [
         "*"
